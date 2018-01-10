@@ -1,0 +1,22 @@
+1.配置本地域名
+	1.host文件
+	C:\Windows\System32\drivers\etc
+	127.0.0.1 frontend.hyii2.com
+	127.0.0.1 backend.hyii2.com
+	
+	2.apache配置文
+	E:\work\phpStudy\phpStudy\Apache\conf
+	
+	<VirtualHost *:80>
+		DocumentRoot "E:/muke/hyii2/frontend/web"
+		ServerName frontend.hyii2.com
+	</VirtualHost>
+
+	<VirtualHost *:80>
+		DocumentRoot "E:/muke/hyii2/backend/web"
+		ServerName backend.hyii2.com
+	</VirtualHost>
+
+2.配置环境变量
+	php.exe所在的目录
+	E:\work\phpStudy\phpStudy\php56n;

@@ -1,0 +1,50 @@
+.border-bottom {
+    border-bottom: 1px solid #ccc;
+}
+
+.panel-body .media-feed {
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+.panel-body .media-feed .media .media-object {
+    width: 40px;
+    height: 40px;
+    padding: 1px;
+    border: #ddd solid 1px;
+}
+
+.panel-body .media-feed .media-action {
+    margin-top: 5px;
+}
+
+.panel-body {
+	padding-left:0px;
+	padding-right:0px;
+}
+
+.feed .panel-body {
+	padding-bottom:0px;
+}
+.btn-feed {
+	height:50px;
+	border-radius:0px;
+}
+
+.form-group textarea {
+    height: 50px;
+    resize: none;
+    font-size: 12px;
+}
+
+.panel-body .media-feed {
+    height: 360px;
+    position: relative;
+	word-break: break-all;
+	overflow:auto;
+}
+
+.panel-body ul {
+    padding: 0;
+    margin: 0;
+}

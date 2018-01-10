@@ -1,0 +1,16 @@
+/**/
+.tag-cloud a {
+	border: 1px solid #ebebeb;
+    padding: 2px 7px;
+    color: #333;
+    line-height: 2em;
+    display: inline-block;
+	font-size:14px;
+    margin: 0 7px 7px 0;
+    transition: all 0.2s ease;
+}
+
+.tag-cloud a:hover {
+	background-color:#5bc0de;
+	text-decoration: none;
+}

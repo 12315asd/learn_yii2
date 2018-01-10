@@ -1,0 +1,17 @@
+RewriteEngine on
+ 
+ ##
+ # @from Yii中文网 www.yii-china.com
+ # @mail xianan_huang@163.com
+ # @author 上班偷偷打酱油
+ ##
+ 
+ # 如果是一个目录或者文件，就访问目录或文件
+ RewriteCond %{REQUEST_FILENAME} !-d
+ 
+ # 如果文件存在，就直接访问文件，不进行下面的RewriteRule
+ RewriteCond %{REQUEST_FILENAME} !-f
+
+ RewriteRule . index.php
+ 
+ 
