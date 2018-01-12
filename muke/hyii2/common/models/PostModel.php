@@ -20,7 +20,10 @@ use common\models\base\BaseModel;
  * @property integer $updated_at
  */
 class PostModel extends BaseModel
-{
+{    
+
+     const IS_VALID='1';//发布
+     const NO_VALID='0';//未发布
     /**
      * @inheritdoc
      */
@@ -28,7 +31,12 @@ class PostModel extends BaseModel
     {
         return 'posts';
     }
-
+    
+    //关联表
+    public function getRelate()
+    {
+        return $this->hasMany(RelationPostTagModel::className(),['post_id'=>'id']);
+    }
     /**
      * @inheritdoc
      */

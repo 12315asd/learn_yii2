@@ -5,10 +5,44 @@ use Yii;
 use frontend\controllers\base\BaseController;
 use frontend\models\PostForm;
 use common\models\CatsModel;
+use common\models\PostModel;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 
 class PostController extends BaseController
 { 
-
+     /**
+      * 行为过滤
+      * @return [type] [description]
+      */
+      public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['index', 'create','upload','ueditor'],
+                'rules' => [
+                    [
+                        'actions' => ['index'],
+                        'allow' => true,
+                        
+                    ],
+                    [
+                        'actions' => ['create','upload','ueditor'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                      '*' =>['get','post'],
+                    //'create' => ['post'],
+                ],
+            ],
+        ];
+    }
 	/*
   图片上传组件
   */
@@ -50,9 +84,65 @@ public function actions()
 	{
 
         $model=new PostForm();
+        //定义场景
+        $model->setScenario(PostForm::SCENARIOS_CREATE);
+        if($model->load(Yii::$app->request->post()) && $model->validate()){
+
+            if(!$model->create()){
+
+                Yii::$app->session->setFlash('warning', $model -> _lastError);
+
+            }else{
+
+                return $this->redirect(['post/view', 'id' => $model->id]);
+
+            }
+
+        }
         //获取所有分类
         $cat=CatsModel::getAllCats();
         return $this->render('create',['model'=>$model,'cat'=>$cat]);
 	}
+
+ public function actionView($id)
+ {
+  $model =new PostForm();
+   $data = $model ->getViewById($id);
+
+   return $this->render('view',['data'=>$data]);
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
  
