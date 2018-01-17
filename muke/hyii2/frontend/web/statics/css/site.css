@@ -140,3 +140,73 @@ a.desc:after {
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
     color:#fff;
 }
+.page-title {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.page-title h1 {
+    font-size: 18px;
+    margin: 4px 0 10px;
+}
+
+.page-title span {
+    color: #999;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.page-content {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    min-height: 400px;
+}
+.panel-body h1 {
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.post-label {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: block;
+    line-height: 1.42857;
+    padding: 4px;
+    transition: border 0.2s ease-in-out 0s;
+    border-radius: 0;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.post-label > img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 150px;
+    width: 100%;
+}
+.post-tags {
+    color: #999;
+    font-size: 12px;
+}
+
+.post-tags span {
+    margin-right: 4px;
+}
+
+.post-tags a {
+    color: #999;
+}
+
+.tags {
+    font-size: 12px;
+    margin-left: 2px;
+}
+
+.font-12 {
+    font-size: 12px;
+}

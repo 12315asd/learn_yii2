@@ -8,7 +8,7 @@ use common\models\CatsModel;
 use common\models\PostModel;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
-
+use common\models\PostExtendModel;
 class PostController extends BaseController
 { 
      /**
@@ -104,10 +104,19 @@ public function actions()
         return $this->render('create',['model'=>$model,'cat'=>$cat]);
 	}
 
+  /**
+   * 文章详情页
+   */
+
  public function actionView($id)
  {
   $model =new PostForm();
    $data = $model ->getViewById($id);
+    
+    //文章统计
+    $model =new PostExtendModel();
+    
+    $model->upCounter(['post_id'=>$id],'browser',1);
 
    return $this->render('view',['data'=>$data]);
  }
