@@ -26,6 +26,15 @@ $this ->params['breadcrumbs'][]=$this->title;
 
      </div>   
     <div class="col-lg-3">
+  
+ 
+  <div class="create-btn">
+  <button type="button" class="btn btn-success">成功按钮</button>
+  </div>
+  <div>
+<button type="button" class="btn btn-info">信息按钮</button>
+</div>
+
 
     </div>
 

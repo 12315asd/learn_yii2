@@ -7,5 +7,6 @@ use yii\base\widget;
          <?=PostWidget::widget();?>
          </div>
          <div class="col-lg-3">
+         
          </div>
 </div>

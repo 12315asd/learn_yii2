@@ -6,6 +6,7 @@ use frontend\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
+use frontend\models\FeedForm;
 use frontend\models\ContactForm;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -211,4 +212,28 @@ class SiteController extends BaseController
             'model' => $model,
         ]);
     }
+
+   public function actionAddFeed()
+   {
+    $model =new FeedForm();
+    $model->content = Yii::$app->request->post('content');
+
+    if($model->validate()){
+     if($model->create()){
+
+        return json_encode(['status' => true]);
+        
+       
+
+      }
+     }
+     return json_decode(['status'=>false,'msg'=>'发布失败！']);
+   }
+
+
+
+
+
+
+
 }
