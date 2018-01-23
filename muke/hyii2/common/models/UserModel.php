@@ -152,6 +152,16 @@ class UserModel extends BaseModel implements IdentityInterface
         return Yii::$app->security->validatePassword($password, $this->password_hash);
     }
 
+    public function attributeLabel()
+    {
+        return [
+         'username'=>'用户名',
+         'email' =>'邮箱',
+         'status' => '状态',
+         'created_at'=>'创建时间',
+        ];
+    }
+
     /**
      * Generates password hash from password and sets it to the model
      *

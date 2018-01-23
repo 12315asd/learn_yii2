@@ -9,6 +9,7 @@ $params = array_merge(
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
+    'language' =>'zh-CN',
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [],
@@ -17,6 +18,13 @@ return [
             'identityClass' => 'common\models\AdminModel',
             'enableAutoLogin' => true,
         ],
+        'urlManager'=>[
+              'showScriptName'=>false,
+              'enablePrettyUrl'=>true,
+              'rules' => [],
+
+                
+                   ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [

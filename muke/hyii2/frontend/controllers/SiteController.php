@@ -19,7 +19,8 @@ use frontend\controllers\base\BaseController;
  * Site controller
  */
 class SiteController extends BaseController
-{
+{    
+    
     /**
      * @inheritdoc
      */
@@ -73,7 +74,8 @@ class SiteController extends BaseController
      * @return mixed
      */
     public function actionIndex()
-    {
+    {   
+
         return $this->render('index');
     }
 
