@@ -26,7 +26,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'user_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'is_valid')->textInput() ?>
+    <?= $form->field($model, 'is_valid')->droDownList(['1'=>'有效'],'0'=>'无效') ?>
 
     <?= $form->field($model, 'created_at')->textInput() ?>
 

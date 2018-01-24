@@ -34,10 +34,16 @@ $this->params['breadcrumbs'][] = $this->title;
             'summary',
             //'content:ntext',
             //'label_img',
-             'cat_id',
+             'cat.cat_name',
             // 'user_id',
              'user_name',
-            // 'is_valid',
+            'is_valid'=>[
+                 'attribute' => 'is_valid',
+                'value'=>function($model){
+                    return ($model->is_valid==1)?'有效':'无效';
+                },
+                'filter'=>['1'=>'有效','0'=>'无效'],
+            ],
              'created_at:datetime',
             // 'updated_at',
 

@@ -42,7 +42,7 @@ class PostModel extends BaseModel
         return $this->hasOne(PostExtendModel::className(),['post_id'=>'id']);
     }
       public function getCat(){
-        return $this->hasOne(CatExtendModel::className(),['cat_id'=>'id']);
+        return $this->hasOne(CatsModel::className(),['id'=>'cat_id']);
     }
     /**
      * @inheritdoc
