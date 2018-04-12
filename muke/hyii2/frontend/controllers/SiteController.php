@@ -215,6 +215,7 @@ class SiteController extends BaseController
         ]);
     }
 
+ //留言发布
    public function actionAddFeed()
    {
     $model =new FeedForm();

@@ -27,9 +27,9 @@ class SidebarWidget extends Menu
                         ['label'=>'更新文章','url'=>['post/update'],'visible'=>false],
                         ]                       
                     ],
-                    ['label'=>'分类管理','url'=>['cat/index'],'items'=>[
-                        ['label'=>'创建文章','url'=>['cat/create'],'visible'=>false],
-                        ['label'=>'更新文章','url'=>['cat/update'],'visible'=>false],
+                    ['label'=>'分类管理','url'=>['cats/index'],'items'=>[
+                        ['label'=>'创建文章','url'=>['cats/create'],'visible'=>false],
+                        ['label'=>'更新文章','url'=>['cats/update'],'visible'=>false],
                         ]                        
                     ],
                     ['label'=>'标签管理','url'=>['tag/index']],

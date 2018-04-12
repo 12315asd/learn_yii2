@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'label_img')->fileInput() ?>
+    <?= $form->field($model, 'label_img')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'cat_id')->textInput() ?>
 
@@ -26,7 +26,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'user_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'is_valid')->textInput() //droDownList(['1'=>'有效','0'=>'无效'])?>  
+    <?= $form->field($model, 'is_valid')->textInput() ?>
 
     <?= $form->field($model, 'created_at')->textInput() ?>
 

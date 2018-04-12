@@ -32,9 +32,9 @@ $this ->params['breadcrumbs'][]=$this->title;
  <?php if(!\Yii::$app->user->isGuest):?>
   <a class="btn btn-success btn-block btn-post" href="<?=Url::to(['post/create'])?>">创建文章</a>
   
-  <?php // if(\Yii::$app->user->identity->id == $data['user_id']) ?>
-   <!-- <a class="btn btn-info btn-block btn-post" href="<?//=Url::to(['post/update','id'=>$data['id']])?>">编辑文章</a> -->
-       <?php// endif;?>
+  <?php  if(\Yii::$app->user->identity->id == $data['user_id']) ?>
+    <a class="btn btn-info btn-block btn-post" href="<?=Url::to(['post/update','id'=>$data['id']])?>">编辑文章</a> 
+       <?php?>
       
       <?php endif;?> 
 
